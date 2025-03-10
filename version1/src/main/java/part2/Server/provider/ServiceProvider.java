@@ -1,4 +1,4 @@
-package part1.Server.provider;
+package part2.Server.provider;
 
 import lombok.RequiredArgsConstructor;
 
