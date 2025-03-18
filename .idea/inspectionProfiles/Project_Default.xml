@@ -6,5 +6,6 @@
         <language minSize="117" name="Java" />
       </Languages>
     </inspection_tool>
+    <inspection_tool class="LoggingSimilarMessage" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
   </profile>
 </component>

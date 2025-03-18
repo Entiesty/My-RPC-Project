@@ -1,11 +1,11 @@
-package part2.Server.netty.handler;
+package part1.Server.netty.handler;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.RequiredArgsConstructor;
-import part2.Server.provider.ServiceProvider;
-import part2.common.message.RpcRequest;
-import part2.common.message.RpcResponse;
+import part1.Server.provider.ServiceProvider;
+import part1.common.message.RpcRequest;
+import part1.common.message.RpcResponse;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

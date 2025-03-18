@@ -1,10 +1,10 @@
-package part2.Server.provider;
+package part1.Server.provider;
 
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import part2.Server.serviceRegister.ServiceRegister;
-import part2.Server.serviceRegister.impl.ZKServiceRegister;
+import part1.Server.serviceRegister.ServiceRegister;
+import part1.Server.serviceRegister.impl.ZKServiceRegister;
 
 import java.net.InetSocketAddress;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package part2.client.rpcClient.impl;
+package part1.client.rpcClient.impl;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
@@ -9,12 +9,12 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.util.AttributeKey;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import part2.client.netty.nettyInitializer.NettyClientInitializer;
-import part2.client.rpcClient.RpcClient;
-import part2.client.serviceCenter.ServiceCenter;
-import part2.client.serviceCenter.ZKServiceCenter;
-import part2.common.message.RpcRequest;
-import part2.common.message.RpcResponse;
+import part1.client.netty.nettyInitializer.NettyClientInitializer;
+import part1.client.rpcClient.RpcClient;
+import part1.client.serviceCenter.ServiceCenter;
+import part1.client.serviceCenter.ZKServiceCenter;
+import part1.common.message.RpcRequest;
+import part1.common.message.RpcResponse;
 
 import java.net.InetSocketAddress;
 

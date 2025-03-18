@@ -1,8 +1,8 @@
-package part2.client;
+package part1.client;
 
-import part2.client.proxy.ClientProxy;
-import part2.common.pojo.User;
-import part2.common.service.UserService;
+import part1.client.proxy.ClientProxy;
+import part1.common.pojo.User;
+import part1.common.service.UserService;
 
 /**
  * RPC 客户端测试类。

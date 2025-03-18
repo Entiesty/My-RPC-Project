@@ -1,14 +1,14 @@
-package part2.common.serializer.myCode;
+package part1.common.serializer.myCode;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import part2.common.message.MessageType;
-import part2.common.message.RpcRequest;
-import part2.common.message.RpcResponse;
-import part2.common.serializer.mySerializer.Serializer;
+import part1.common.message.MessageType;
+import part1.common.message.RpcRequest;
+import part1.common.message.RpcResponse;
+import part1.common.serializer.mySerializer.Serializer;
 
 /**
  * 自定义 Netty 编码器，将 RpcRequest 和 RpcResponse 序列化并写入 ByteBuf。

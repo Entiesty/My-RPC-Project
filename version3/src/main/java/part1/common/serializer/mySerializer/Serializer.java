@@ -1,4 +1,4 @@
-package part2.common.serializer.mySerializer;
+package part1.common.serializer.mySerializer;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

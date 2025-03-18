@@ -1,4 +1,4 @@
-package part2.Server.serviceRegister.impl;
+package part1.Server.serviceRegister.impl;
 
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
@@ -7,7 +7,7 @@ import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.zookeeper.CreateMode;
-import part2.Server.serviceRegister.ServiceRegister;
+import part1.Server.serviceRegister.ServiceRegister;
 
 import java.net.InetSocketAddress;
 

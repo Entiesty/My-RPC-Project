@@ -1,4 +1,4 @@
-package part2.client.serviceCenter;
+package part1.client.serviceCenter;
 
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
@@ -6,8 +6,9 @@ import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import part2.client.cache.ServiceCache;
-import part2.client.serviceCenter.ZKWatcher.ZookeeperWatcher;
+import part1.client.cache.ServiceCache;
+import part1.client.serviceCenter.ZKWatcher.ZookeeperWatcher;
+import part1.client.serviceCenter.balance.impl.ConsistencyHashLoadBalance;
 
 import java.net.InetSocketAddress;
 import java.util.List;
@@ -78,7 +79,7 @@ public class ZKServiceCenter implements ServiceCenter {
             }
 
             // 4️⃣ 获取第一个可用的服务地址
-            String address = addressList.get(0);
+            String address = new ConsistencyHashLoadBalance().selectServer(addressList);
 
             // 5️⃣ 解析地址
             InetSocketAddress inetSocketAddress = parseAddress(address);

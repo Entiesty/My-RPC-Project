@@ -1,11 +1,11 @@
-package part2.client.proxy;
+package part1.client.proxy;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import part2.client.rpcClient.RpcClient;
-import part2.client.rpcClient.impl.NettyRpcClient;
-import part2.common.message.RpcRequest;
-import part2.common.message.RpcResponse;
+import part1.client.rpcClient.RpcClient;
+import part1.client.rpcClient.impl.NettyRpcClient;
+import part1.common.message.RpcRequest;
+import part1.common.message.RpcResponse;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

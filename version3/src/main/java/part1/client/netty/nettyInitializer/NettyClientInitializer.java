@@ -1,12 +1,12 @@
-package part2.client.netty.nettyInitializer;
+package part1.client.netty.nettyInitializer;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
-import part2.client.netty.handler.NettyClientHandler;
-import part2.common.serializer.myCode.MyDecoder;
-import part2.common.serializer.myCode.MyEncoder;
-import part2.common.serializer.mySerializer.JsonSerializer;
+import part1.client.netty.handler.NettyClientHandler;
+import part1.common.serializer.myCode.MyDecoder;
+import part1.common.serializer.myCode.MyEncoder;
+import part1.common.serializer.mySerializer.JsonSerializer;
 
 /**
  * Netty 客户端初始化器，用于配置客户端的 ChannelPipeline。

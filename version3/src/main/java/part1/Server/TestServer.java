@@ -1,10 +1,10 @@
-package part2.Server;
+package part1.Server;
 
 
-import part2.Server.provider.ServiceProvider;
-import part2.Server.server.impl.NettyRpcServer;
-import part2.common.service.UserService;
-import part2.common.service.impl.UserServiceImpl;
+import part1.Server.provider.ServiceProvider;
+import part1.Server.server.impl.NettyRpcServer;
+import part1.common.service.UserService;
+import part1.common.service.impl.UserServiceImpl;
 
 /**
  * RPC 服务器测试类。

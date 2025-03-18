@@ -1,9 +1,9 @@
-package part2.client.netty.handler;
+package part1.client.netty.handler;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.AttributeKey;
-import part2.common.message.RpcResponse;
+import part1.common.message.RpcResponse;
 
 /**
  * Netty 客户端处理器，用于处理从服务端接收到的 RPC 响应。

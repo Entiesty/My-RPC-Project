@@ -1,11 +1,11 @@
-package part2.client.serviceCenter.ZKWatcher;
+package part1.client.serviceCenter.ZKWatcher;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.cache.ChildData;
 import org.apache.curator.framework.recipes.cache.CuratorCache;
-import part2.client.cache.ServiceCache;
+import part1.client.cache.ServiceCache;
 
 /**
  * 监听 Zookeeper 变更事件（节点创建、修改、删除），并同步本地缓存。

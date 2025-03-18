@@ -22,6 +22,9 @@ public class ZookeeperWatcher {
      * @param path 要监听的 ZooKeeper 路径
      */
     public void startWatching(String path) {
+        if (!path.startsWith("/")) {
+            path = "/" + path; // 自动补全 `/`
+        }
         log.info("开始监听 Zookeeper 变更: {}", path);
         try {
             CuratorCache curatorCache = CuratorCache.build(client, path);

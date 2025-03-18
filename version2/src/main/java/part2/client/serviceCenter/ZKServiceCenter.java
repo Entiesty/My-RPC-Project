@@ -63,22 +63,34 @@ public class ZKServiceCenter implements ServiceCenter {
     @Override
     public InetSocketAddress serviceDiscovery(String serviceName) {
         try {
+            // 1️⃣ 先尝试从本地缓存获取服务地址
             List<String> addressList = serviceCache.getServiceAddresses(serviceName);
 
-            if (addressList == null) {
+            // 2️⃣ 如果缓存为空，则从 Zookeeper 获取最新的服务地址
+            if (addressList == null || addressList.isEmpty()) {
                 addressList = client.getChildren().forPath("/" + serviceName);
             }
-            // 获取第一个服务地址
+
+            // 3️⃣ 再次检查 addressList 是否为空
+            if (addressList == null || addressList.isEmpty()) {
+                logger.error("服务发现失败，未找到可用的服务地址: {}", serviceName);
+                throw new RuntimeException("服务发现失败，未找到可用的服务地址: " + serviceName);
+            }
+
+            // 4️⃣ 获取第一个可用的服务地址
             String address = addressList.get(0);
 
-            // 解析服务地址并返回
-            return parseAddress(address);
+            // 5️⃣ 解析地址
+            InetSocketAddress inetSocketAddress = parseAddress(address);
+
+            logger.info("成功发现服务 [{}]，地址: {}", serviceName, inetSocketAddress);
+            return inetSocketAddress;
         } catch (Exception e) {
-            // 记录异常信息并抛出运行时异常
             logger.error("服务发现失败，服务名称: {}", serviceName, e);
             throw new RuntimeException("服务发现失败", e);
         }
     }
+
 
     /**
      * 解析服务地址字符串，将其转换为 InetSocketAddress 对象。

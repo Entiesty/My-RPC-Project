@@ -1,4 +1,4 @@
-package part2.client.serviceCenter;
+package part1.client.serviceCenter;
 
 import java.net.InetSocketAddress;
 

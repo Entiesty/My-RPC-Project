@@ -1,4 +1,4 @@
-package part2.common.message;
+package part1.common.message;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

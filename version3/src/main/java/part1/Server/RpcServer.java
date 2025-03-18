@@ -1,4 +1,4 @@
-package part2.Server;
+package part1.Server;
 
 public interface RpcServer {
     void start(int port);

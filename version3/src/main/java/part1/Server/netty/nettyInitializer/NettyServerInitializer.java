@@ -1,14 +1,14 @@
-package part2.Server.netty.nettyInitializer;
+package part1.Server.netty.nettyInitializer;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
 import lombok.RequiredArgsConstructor;
-import part2.Server.netty.handler.NettyServerHandler;
-import part2.Server.provider.ServiceProvider;
-import part2.common.serializer.myCode.MyDecoder;
-import part2.common.serializer.myCode.MyEncoder;
-import part2.common.serializer.mySerializer.JsonSerializer;
+import part1.Server.netty.handler.NettyServerHandler;
+import part1.Server.provider.ServiceProvider;
+import part1.common.serializer.myCode.MyDecoder;
+import part1.common.serializer.myCode.MyEncoder;
+import part1.common.serializer.mySerializer.JsonSerializer;
 
 /**
  * Netty 服务器通道初始化器。

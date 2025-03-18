@@ -1,11 +1,11 @@
-package part2.common.serializer.mySerializer;
+package part1.common.serializer.mySerializer;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import part2.common.message.RpcRequest;
-import part2.common.message.RpcResponse;
+import part1.common.message.RpcRequest;
+import part1.common.message.RpcResponse;
 
 /**
  * JSON 序列化器，基于 FastJSON 实现序列化与反序列化。

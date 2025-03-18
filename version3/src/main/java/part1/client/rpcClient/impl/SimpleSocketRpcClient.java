@@ -1,9 +1,9 @@
-package part2.client.rpcClient.impl;
+package part1.client.rpcClient.impl;
 
 import lombok.RequiredArgsConstructor;
-import part2.client.rpcClient.RpcClient;
-import part2.common.message.RpcRequest;
-import part2.common.message.RpcResponse;
+import part1.client.rpcClient.RpcClient;
+import part1.common.message.RpcRequest;
+import part1.common.message.RpcResponse;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
