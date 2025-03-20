@@ -2,13 +2,15 @@ package part1.client.proxy;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import part1.client.retry.GuavaRetry;
-import part1.client.rpcClient.RpcClient;
-import part1.client.rpcClient.impl.NettyRpcClient;
-import part1.client.serviceCenter.ServiceCenter;
-import part1.client.serviceCenter.ZKServiceCenter;
-import part1.common.message.RpcRequest;
-import part1.common.message.RpcResponse;
+import part2.client.circuitBreaker.CircuitBreaker;
+import part2.client.circuitBreaker.CircuitBreakerProvider;
+import part2.client.retry.GuavaRetry;
+import part2.client.rpcClient.RpcClient;
+import part2.client.rpcClient.impl.NettyRpcClient;
+import part2.client.serviceCenter.ServiceCenter;
+import part2.client.serviceCenter.ZKServiceCenter;
+import part2.common.message.RpcRequest;
+import part2.common.message.RpcResponse;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -52,7 +54,7 @@ public class ClientProxy implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) {
         try {
             // 构建 RPC 请求对象
-            RpcRequest request = RpcRequest.builder()
+            part2.common.message.RpcRequest request = RpcRequest.builder()
                     .interfaceName(method.getDeclaringClass().getName()) // 接口名称
                     .methodName(method.getName()) // 方法名称
                     .params(args) // 方法参数
